@@ -1,6 +1,6 @@
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
-import sum from '../../../src/node/sum.js';
+import sum from '../../../src/node/sum.js';  // Adjust the import path as needed
 
 describe('Sum function', () => {
   it('should add 1 and 2 to make 3', () => {

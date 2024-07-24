@@ -1,4 +1,7 @@
 {
+  "name": "demo_unit_test_js_ts",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "test": "jest --runInBand",
     "test:jest": "jest --runInBand",

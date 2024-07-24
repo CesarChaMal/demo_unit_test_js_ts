@@ -4,7 +4,7 @@ import path from 'path';
 import url from 'url';
 
 const testPathPattern = process.argv[2];
-console.log(`Using glob pattern: ${testPathPattern}`);  // Debugging line
+console.log(`Using glob pattern: ${testPathPattern}`);
 
 glob(testPathPattern, (err, files) => {
   if (err) {
@@ -17,18 +17,16 @@ glob(testPathPattern, (err, files) => {
     process.exit(1);
   }
 
-  console.log(`Matched files: ${files.join(', ')}`);  // Debugging line
+  console.log(`Matched files: ${files.join(', ')}`);
 
-  // Convert file paths to Unix-style paths for Windows compatibility
   const unixStylePaths = files.map(file => path.resolve(file).replace(/\\/g, '/'));
 
-  console.log(`Unix-style Paths: ${unixStylePaths.join(', ')}`);  // Debugging line
+  console.log(`Unix-style Paths: ${unixStylePaths.join(', ')}`);
 
   const nodeArgs = ['--loader', 'ts-node/esm', ...unixStylePaths];
 
-  console.log(`Node arguments: ${nodeArgs.join(' ')}`);  // Debugging line
+  console.log(`Node arguments: ${nodeArgs.join(' ')}`);
 
-  // Log instructions to run Node manually
   console.log('\nTo manually run Node, execute the following command in your terminal:\n');
   console.log(`node ${nodeArgs.join(' ')}\n`);
 
