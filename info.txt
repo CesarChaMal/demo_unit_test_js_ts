@@ -1,0 +1,58 @@
+-- Javascript and Node test
+
+-- Using Jest
+npm install --save-dev jest
+
+-- Using Mocha
+npm install --save-dev mocha chai
+
+
+-- Typescript test
+
+-- Using Jest
+npm install --save-dev jest typescript ts-jest @types/jest
+
+
+-- Using Mocha
+npm install --save-dev mocha chai typescript @types/mocha @types/chai ts-node
+
+
+-- Install all dependencies
+npm install
+
+
+-- Execute tests
+
+-- Run All Tests (JavaScript, TypeScript, Node.js):
+npm run test
+
+-- Run All Jest Tests (JavaScript, TypeScript, Node.js):
+npm run test:jest
+
+-- Run All Mocha Tests (JavaScript, TypeScript, Node.js):
+npm run test:mocha
+
+-- Run Jest Tests for Node.js Only:
+npm run test:node:jest
+
+-- Run Mocha Tests for Node.js Only:
+npm run test:node:mocha
+
+-- Run Jest Tests for Javascript Only:
+npm run test:js:jest
+
+-- Run Mocha Tests for Javascript Only:
+npm run test:js:mocha
+
+-- Run Jest Tests for Typescript Only:
+npm run test:ts:jest
+
+-- Run Mocha Tests for Typescript Only:
+npm run test:ts:mocha
+
+-- Make the Script Executable
+chmod +x run_all_tests.sh
+
+-- Run the Script
+./run_all_tests.sh
+

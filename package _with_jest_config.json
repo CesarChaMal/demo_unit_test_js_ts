@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "test": "jest",
+    "test:jest": "jest",
+    "test:mocha": "mocha --require ts-node/register 'test/**/*.test.ts' 'test/**/*.test.js'",
+    "test:node:jest": "jest test/node/jest",
+    "test:node:mocha": "mocha --require ts-node/register 'test/node/mocha/**/*.test.js'",
+    "test:js:jest": "jest test/js/jest",
+    "test:js:mocha": "mocha --require ts-node/register 'test/js/mocha/**/*.test.js'",
+    "test:ts:jest": "jest test/ts/jest",
+    "test:ts:mocha": "mocha --require ts-node/register 'test/ts/mocha/**/*.test.ts'"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": ["ts", "js"],
+    "testMatch": [
+      "**/test/**/*.(test|spec).(ts|js)"
+    ]
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/jest": "^29.5.12",
+    "@types/mocha": "^10.0.7",
+    "chai": "^5.1.1",
+    "jest": "^29.7.0",
+    "mocha": "^10.7.0",
+    "ts-jest": "^29.2.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
