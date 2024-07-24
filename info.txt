@@ -50,9 +50,25 @@ npm run test:ts:jest
 -- Run Mocha Tests for Typescript Only:
 npm run test:ts:mocha
 
+
 -- Make the Script Executable
 chmod +x run_all_tests.sh
 
 -- Run the Script
 ./run_all_tests.sh
+
+
+
+npx mocha --loader ts-node/esm --require ./mocha-setup.mjs "file:///G:/IdeaProjects/demo_unit_test_js_ts/test/node/mocha/sum.test.js"
+npx mocha --loader ts-node/esm --require ./mocha-setup.mjs file:///G:/IdeaProjects/demo_unit_test_js_ts/test/node/mocha/sum.test.js
+npx mocha --loader ts-node/esm --require ./mocha-setup.mjs 'file:///G:/IdeaProjects/demo_unit_test_js_ts/test/node/mocha/sum.test.js'
+
+mocha --loader ts-node/esm --require ./mocha-setup.mjs "file:///G:/IdeaProjects/demo_unit_test_js_ts/test/node/mocha/sum.test.js"
+mocha --loader ts-node/esm --require ./mocha-setup.mjs file:///G:/IdeaProjects/demo_unit_test_js_ts/test/node/mocha/sum.test.js
+mocha --loader ts-node/esm --require ./mocha-setup.mjs 'file:///G:/IdeaProjects/demo_unit_test_js_ts/test/node/mocha/sum.test.js'
+
+mocha --loader ts-node/esm --require ./mocha-setup.mjs "file:///G:\\IdeaProjects\\demo_unit_test_js_ts\\test\\node\\mocha\\sum.test.js"
+mocha --loader ts-node/esm --require ./mocha-setup.mjs "G:\\IdeaProjects\\demo_unit_test_js_ts\\test\\node\\mocha\\sum.test.js"
+mocha --loader ts-node/esm --require ./mocha-setup.mjs "/g/IdeaProjects/demo_unit_test_js_ts/test/node/mocha/sum.test.js"
+
 
