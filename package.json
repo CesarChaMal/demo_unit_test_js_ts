@@ -5,25 +5,25 @@
   "scripts": {
     "test": "jest --runInBand",
     "test:jest": "jest --runInBand",
-    "test:mocha": "node run-mocha.mjs test/**/*.test.ts && node run-mocha.mjs test/**/*.test.mjs",
+    "test:mocha": "mocha -r ts-node/register test/**/*.test.ts test/**/*.test.js",
     "test:node:jest": "jest --runInBand test/node/jest",
-    "test:node:mocha": "node run-mocha.mjs test/node/mocha/**/*.test.mjs",
+    "test:node:mocha": "mocha -r ts-node/register test/node/mocha/**/*.test.js",
     "test:js:jest": "jest --runInBand test/js/jest",
-    "test:js:mocha": "node run-mocha.mjs test/js/mocha/**/*.test.mjs",
+    "test:js:mocha": "mocha -r ts-node/register test/js/mocha/**/*.test.js",
     "test:ts:jest": "jest --runInBand test/ts/jest",
-    "test:ts:mocha": "node run-mocha.mjs test/ts/mocha/**/*.test.ts"
+    "test:ts:mocha": "mocha -r ts-node/register test/ts/mocha/**/*.test.ts"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.0",
-    "@types/chai": "^4.3.16",
+	"@types/chai": "^4.1.7",
+	"@types/mocha": "^5.2.7",
     "@types/jest": "^29.5.12",
-    "@types/mocha": "^10.0.7",
-    "chai": "^5.1.1",
+	"chai": "^4.2.0",
+	"mocha": "^5.2.0",
     "glob": "^8.0.3",
     "jest": "^29.7.0",
-    "mocha": "^10.7.0",
     "ts-jest": "^29.2.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "ts-node": "^8.0.2",
+	"typescript": "^3.3.3"
   }
 }
