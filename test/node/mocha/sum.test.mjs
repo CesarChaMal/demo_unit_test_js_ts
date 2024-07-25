@@ -1,14 +1,9 @@
+import { describe, it } from 'mocha';
 import { expect } from 'chai';
-const { describe, it } = require('mocha');
-
-async function getSum() {
-  const { default: sum } = await import('../../../src/node/sum.js');
-  return sum;
-}
+import sum from '../../../src/node/sum.js';  // Adjust the import path as needed
 
 describe('Sum function', () => {
-  it('should add 1 and 2 to make 3', async () => {
-    const sum = await getSum();
+  it('should add 1 and 2 to make 3', () => {
     expect(sum(1, 2)).to.equal(3);
   });
 });

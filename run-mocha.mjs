@@ -4,7 +4,7 @@ import path from 'path';
 import { pathToFileURL } from 'url';
 
 const testPathPattern = process.argv[2] || 'test/**/*.test.mjs';
-console.log(`Using glob pattern: ${testPathPattern}`);  // Debugging line
+console.log(`Using glob pattern: ${testPathPattern}`);
 
 glob(testPathPattern, (err, files) => {
   if (err) {
@@ -17,17 +17,16 @@ glob(testPathPattern, (err, files) => {
     process.exit(1);
   }
 
-  console.log(`Matched files: ${files.join(', ')}`);  // Debugging line
+  console.log(`Matched files: ${files.join(', ')}`);
 
   // Convert file paths to file URLs for Windows compatibility
   const fileUrls = files.map(file => pathToFileURL(path.resolve(file)).href);
 
-  console.log(`File URLs: ${fileUrls.join(', ')}`);  // Debugging line
+  console.log(`File URLs: ${fileUrls.join(', ')}`);
 
-  // Use the correct path conversion to file URL
   const nodeArgs = ['--loader', 'ts-node/esm', ...fileUrls];
 
-  console.log(`Node arguments: ${nodeArgs.join(' ')}`);  // Debugging line
+  console.log(`Node arguments: ${nodeArgs.join(' ')}`);
 
   // Log instructions to run Node manually
   console.log('\nTo manually run Node, execute the following command in your terminal:\n');
