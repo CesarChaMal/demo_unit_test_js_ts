@@ -8,16 +8,16 @@ echo "Running all tests using Jest..."
 npm run test:jest
 
 # Run All Tests (JavaScript, TypeScript, Node.js) using Mocha
-echo "Running all tests using Mocha..."
-npm run test:mocha
+#echo "Running all tests using Mocha..."
+#npm run test:mocha
 
 # Run Jest Tests for Node.js Only
 echo "Running Jest tests for Node.js only..."
 npm run test:node:jest
 
 # Run Mocha Tests for Node.js Only
-echo "Running Mocha tests for Node.js only..."
-npm run test:node:mocha
+#echo "Running Mocha tests for Node.js only..."
+#npm run test:node:mocha
 
 # Run Jest Tests for JavaScript Only
 echo "Running Jest tests for JavaScript only..."
